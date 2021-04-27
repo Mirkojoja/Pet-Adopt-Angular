@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-6">
+        <div class="row">
+            <div class="col-6">
+                <img src="{{pet.image}}" width="100%" >
+            </div>
+            <div class="col">
+                <h2>{{pet.name}}</h2><br>
+                <p>Category:{{pet.category}}</p>
+                <p>Sex:{{pet.sex == 'f' ? 'Female' : 'Male'}}</p>
+                <p>Size: {{pet.size_kg}}kg</p>
+            </div>
+        </div>
+        <p>{{pet.story}}</p>
+    </div>
+   
+    <div class="col-4">
+        <form [formGroup]="formValidator" (submit)="onSubmit()">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Name</label>
+              <input type="text" class="form-control" id="name" name="name" formControlName="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Contact</label>
+              <input type="text" class="form-control" id="contact" formControlName="contact" name="contact" placeholder="Contact">
+            </div>
+            <button type="submit" class="btn btn-primary float-right" >Submit request</button>
+          </form>
+    </div>
+</div>

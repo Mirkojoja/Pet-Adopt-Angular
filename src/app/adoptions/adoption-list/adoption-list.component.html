@@ -1,0 +1,21 @@
+<p>TODO - implementirati listu zahteva za usvajanje</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">PetID</th>
+        <th scope="col">Pet Name</th>
+        <th scope="col">Name</th>
+        <th scope="col">Contact</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let adopt of adoptions?.results">
+        <th>{{adopt?.petId}}</th>
+        <th>{{adopt?.petName}}</th>
+        <th>{{adopt?.name}}</th>
+        <th>{{adopt?.contact}}</th>
+        <th><button (click)="removeAdoption(adopt._id)" type="submit" class="btn btn-primary float-right">Approve request</button></th>
+      </tr>
+    </tbody>
+  </table>
